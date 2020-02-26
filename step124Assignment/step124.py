@@ -7,7 +7,7 @@ import time
 import sqlite3
 import shutil
 
-# My database
+# Creating my database
 conn = sqlite3.connect('db_124.db')
 with conn:
     cur = conn.cursor()
@@ -20,7 +20,7 @@ with conn:
 
 # My Functions
 
-def pickSourceDir():
+def pickSourceDir(**kwargs):
     myDir = tkinter.filedialog.askdirectory()
     source_dir.delete(0, END)
     source_dir.insert(0, myDir)
@@ -42,7 +42,7 @@ def moveFiles():
             epochTime = os.path.getmtime(full)
             epochTimeStr = str(epochTime)
             localTime = str(time.ctime(epochTime))
-            phrase = "\n" + x + " was last modified " + localTime + ".\n"
+            phrase = "\n" + x + " was last modified " + localTime + "."
             with conn:
                 cur.execute("INSERT INTO tbl_txtFiles (col_fileName, col_timeStamp) VALUES (?, ?)", (x, localTime,))
                 conn.commit()
