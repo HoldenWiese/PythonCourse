@@ -40,7 +40,6 @@ def moveFiles():
         if x.endswith(".txt"):
             full = os.path.join(source_entry, x)
             epochTime = os.path.getmtime(full)
-            epochTimeStr = str(epochTime)
             localTime = str(time.ctime(epochTime))
             phrase = "\n" + x + " was last modified " + localTime + "."
             with conn:
