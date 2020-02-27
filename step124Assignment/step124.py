@@ -71,7 +71,7 @@ destination_dir.grid(row=1, column=1, padx=20, pady=10, sticky=E)
 btn_check = Button(text="Check for files...", pady=10, command=moveFiles)
 btn_check.grid(row=2, column=0, padx=(20, 10), pady=(0, 15))
 
-btn_close = Button(text="Close Program", pady=10)
+btn_close = Button(text="Close Program", pady=10, command=m.destroy)
 btn_close.grid(row=2, column=1, padx=20, pady=(0, 15), sticky=E)
 
 m.mainloop()
