@@ -1,0 +1,5 @@
+1. Make a directory an isolate environment using virtualenv
+
+2. Install Django in the directory using this command: python -m pip install Django
+
+3. 
