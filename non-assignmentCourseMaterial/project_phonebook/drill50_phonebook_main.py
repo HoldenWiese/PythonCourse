@@ -92,6 +92,7 @@ class ParentWindow(Frame):
     root.mainloop()             #This ensures the Tkinter class object, our window, to keep looping
                                 #meaning, it will stay open until we instruct it to close
 """
+print(help(Frame))
 if __name__ == "__main__":
     root = tk.Tk()
     ParentWindow(root)
