@@ -34,4 +34,4 @@ with conn:
     cur.execute("SELECT * FROM tbl_txtFiles")
     result = cur.fetchall()
     print("\nThis is an array of tuples. Each tuple represents a row in the table and the rows respective "
-          "data. \nThe following items were discovered as text files in the fileList tuple.\n" + str(result))
+          "data. \nThe following items were discovered as text files in the fileList tuple.\n" + str(result[0][1]))
